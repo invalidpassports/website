@@ -11,15 +11,26 @@
   
   <script type="module" crossorigin src="/assets/index.a0a81b29.js"></script>
   <link rel="modulepreload" href="/assets/vendor.ebfa3080.js">
-  <link rel="stylesheet" href="/assets/index.b2ec5220.css">
+  <link rel="stylesheet" href="/assets/index.a404e5e0.css">
 </head>
 <body>
   <div id="root"></div>
   <div id="root2"></div>
   <div id="textoverlay">
-    <div id="english">Invalid Passports</div>
-    <div id="japanese">無効なパスポート</div>
+    <h1 class="title" id="english">Invalid Passports</h1>
+    <h2 class="subtitle" id="japanese">無効なパスポート</h2>
+    <h2 class="subtitle" id="arabic">جوازات سفر غير صالحة</h2>
+    <h2 class="subtitle" id="hebrew">דרכונים לא חוקיים</h2>
+    <h2 class="subtitle" id="russian">Недействительный паспорт</h2>
+    <h2 class="subtitle" id="korean">유효하지 않은 여권</h2>
+    
   </div>
+  <script>
+    const languages = ['japanese', 'arabic', 'hebrew', 'russian', 'korean'];
+    const lang = languages[Math.floor(Math.random() * languages.length)];
+    document.getElementById(lang).style.display = 'block';
+  </script>
   
 </body>
 </html>
+
